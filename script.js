@@ -446,8 +446,19 @@ String.fromCharCode()
 */
 
 function rot13(str) { // LBH QVQ VG!
-  
-    return str;
+    for (var i = 0; i < str.length; i++) {
+        
+        var char = str.charCodeAt(i);
+        if (char === 32 || char === 33 || char === 46) {
+            console.log(char);
+        } else if (char !== 32 || char !== 33 || char !== 46) {
+            char += 13;
+            if (char >= 91 && char <= 96) {
+            char += 6;
+            }
+        } 
+        console.log(char + " " + String.fromCharCode(char));
+    }
 }
 
 // Change the inputs below to test
