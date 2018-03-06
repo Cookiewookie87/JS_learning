@@ -342,10 +342,10 @@ String.prototype.indexOf()
 */
 /*
 function mutation(arr) {
-    //put words in lower case and creates array of characters
+    //put words in seperate variable in lower case and creates array of characters
     var word = arr[0].toLowerCase().split('');
     var searchWord = arr[1].toLowerCase().split('');
-    
+    //Go through first word with first letter of second word to check if first word contains that letter. If not, returns false
     for (var i = 0; i < searchWord.length; i++) {
         if (word.indexOf(searchWord[i], 0) === -1) {
             return console.log(false);
@@ -395,13 +395,16 @@ Array.prototype.filter()
 */
 /*
 function destroyer(arr) { 
+    /loops through arguments (the first is parameter)
     for(var i = 1; i < arguments.length; i++) {  
+        //loops and check if argument is in array, if it is it deletes it (leaving index and undefined value in array)
         for (var j = 0; j < arr.length; j++) {
             if (arguments[i] === arr[j]) {
                 delete arr[j];
             }
         }
     }
+    //Filters all deleted items from array (index is still there, value is undefined, which is false)
     return console.log(arr.filter(Boolean));
 }
 
@@ -421,8 +424,11 @@ Array.prototype.sort()
 */
 /*
 function getIndexToIns(arr, num) {
+    //Sorts numbers in ascending order
     arr.sort(function(a, b) {return a-b});
+    //var for tracking index position, does not reset because it is global
     var counter = 0;
+    //loops through array and checks where number should be
     for (var i = 0; i <= arr.length; i++) {
          if (num > arr[i]){
              counter++;
@@ -453,14 +459,20 @@ function rot13(str) {
     var arr = [];
     
     for (var i = 0; i < str.length; i++) {
+        //gets ASCII number of character
         var char = str.charCodeAt(i);
+        //from ASCII code it than checks if its specific number (,.!?)
         if (char === 32 || char === 33 || char === 46 || char === 63) {
+            //if it is ,.?! than just push it to array
             arr.push(String.fromCharCode(char));
+        //if it is not .,!? than add 13 by ROT13 principle
         } else if (char !== 32 || char !== 33 || char !== 46 || char !== 63) {
             char += 13;
+            //By ASCII, chars starts with A on 65 and ends with Z on 90. Than there are 6 non alphabetical chars. If we get Z, we must add 6 in //rder to advance to other low chars.
             if (char > 90) {
                 char += 6;
             }
+            //push character to array and transform it to uppercase
             arr.push(String.fromCharCode(char).toUpperCase());
         } 
     }
