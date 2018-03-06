@@ -466,13 +466,13 @@ function rot13(str) {
             //if it is ,.?! than just push it to array
             arr.push(String.fromCharCode(char));
         //if it is not .,!? than add 13 by ROT13 principle
-        } else if (char !== 32 || char !== 33 || char !== 46 || char !== 63) {
+        } else {
             char += 13;
             //By ASCII, chars starts with A on 65 and ends with Z on 90. Than there are 6 non alphabetical chars. If we get Z, we must add 6 in //rder to advance to other low chars.
             if (char > 90) {
                 char += 6;
             }
-            //push character to array and transform it to uppercase
+            //push character to array and transform it to upper case
             arr.push(String.fromCharCode(char).toUpperCase());
         } 
     }
