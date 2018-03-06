@@ -1,5 +1,9 @@
 /*
 --------------------------------------------------------------------------------------------------
+
+BASIC ALGORYTHM SCRIPTING
+
+--------------------------------------------------------------------------------------------------
 1. Reverse the provided string.
 
 You may need to turn the string into an array before you can reverse it.
@@ -444,26 +448,30 @@ Here are some helpful links:
 String.prototype.charCodeAt()
 String.fromCharCode()
 */
-
-function rot13(str) { // LBH QVQ VG!
+/*
+function rot13(str) {
+    var arr = [];
+    
     for (var i = 0; i < str.length; i++) {
-        
         var char = str.charCodeAt(i);
-        if (char === 32 || char === 33 || char === 46) {
-            console.log(char);
-        } else if (char !== 32 || char !== 33 || char !== 46) {
+        if (char === 32 || char === 33 || char === 46 || char === 63) {
+            arr.push(String.fromCharCode(char));
+        } else if (char !== 32 || char !== 33 || char !== 46 || char !== 63) {
             char += 13;
-            if (char >= 91 && char <= 96) {
-            char += 6;
+            if (char > 90) {
+                char += 6;
             }
+            arr.push(String.fromCharCode(char).toUpperCase());
         } 
-        console.log(char + " " + String.fromCharCode(char));
     }
+    return arr.join("");
 }
 
-// Change the inputs below to test
-rot13("SERR PBQR PNZC");
-
+console.log(rot13("SERR PBQR PNZC"));
+console.log(rot13("SERR CVMMN!"));
+console.log(rot13("SERR YBIR?"));
+console.log(rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK."));
+*/
 
 
 
