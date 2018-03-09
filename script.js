@@ -873,12 +873,12 @@ Output: [5,3,0,9,8,2,1,4,7,6]
 function shuffle (arr) {
     var newArr = [];
     var temp = 0;
-    var random = Math.floor((Math.random() * arr.length) + 0);
-
     for (var i = 0; i < arr.length; i++) {
-        temp = arr.shift();
-        newArr.push(temp)
+        var random = Math.floor((Math.random() * arr.length) + 0);
+        newArr[random] = arr.shift();
     }
+
+    return newArr;
 }
 
 console.log(shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]));
