@@ -753,6 +753,180 @@ console.log(sumProd([1, 2, 3, 4, 5, 6]));
 --------------------------------------------------------------------------------------------------
 13. Write a JavaScript program to add items in an blank array and display the items.
 */
+/*
+//gloval variable for array index and array
+var i = 0;
+var arr = [];
+//event listener for add button
+document.querySelector('#addBtn').addEventListener('click', function () {
+    //gets value from input
+    var inputValue = document.getElementById('itemInput').value;
+    //if value is not empty
+    if (inputValue !== '') {
+        //set first value to array index
+        arr[i] = inputValue;
+        //increment index
+        i++;
+        document.getElementById('itemInput').value = '';
+        console.log(arr);
+    } else {
+        alert('Input should not be empty');
+    }
+    document.getElementById('itemInput').focus();
+});
+
+document.querySelector('#displayBtn').addEventListener('click', function () {
+
+    for (var j = 0; j < arr.length ; j++) {
+        //set content of array to variable
+        var result = result + arr[j] + '<br/>';
+    }
+    //display content to HTML element
+    document.getElementById('result').innerHTML = result;
+});
+
+document.querySelector('#resetBtn').addEventListener('click', function () {
+    //resets array and array index
+    arr = [];
+    i = 0;
+    document.getElementById('itemInput').value = '';
+});
+*/
+/*
+--------------------------------------------------------------------------------------------------
+14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+Input: [1,2,2,4,5,4,7,8,7,3,6]
+Output: ["1","2","3","4","5","6","7","8"]
+*/
+/*
+function duplicates (arr) {
+    var newArr = [];
+    var arrLength = arr.length; //if in loop, the lenght gets shorter every time because shift()
+    //goes through array
+    for (var i = 0; i < arrLength; i++) {
+        //gets first element of array and move it to temp variable
+        var temp = arr.shift();
+
+        //if element exist in new arraw ignore it, else put temp element to new array
+        if (newArr.indexOf(temp) === -1) {
+            newArr.push(temp);
+        }
+    }
+    return newArr;
+}
+
+console.log(duplicates([1,2,2,4,5,4,7,8,7,3,6]));
+*/
+/*
+--------------------------------------------------------------------------------------------------
+15. We have the following arrays : Go to the editor
+color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+o = ["th","st","nd","rd"]
+Write a JavaScript program to display the colors in the following way :
+"1st choice is Blue ."
+"2nd choice is Green."
+"3rd choice is Red."
+"4th choice is Orange."
+"5th choice is Violet."
+"6th choice is indigo."
+"7th choice is Yellow."
+*/
+/*
+function color (arr, suffix) {
+    for (var i = 0; i < arr.length; i++) {
+        if (i >= 3){
+            console.log(i+1 + suffix[0] + " choice is " + arr[i]);
+        } else {
+            console.log(i+1 + suffix[i + 1] + " choice is " + arr[i]);
+        }
+    }
+}
+
+console.log(color(["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"], ["th","st","nd","rd"]));
+*/
+/*
+--------------------------------------------------------------------------------------------------
+16. Find the leap years in a given range of years.
+Input: (2000,2012)
+Output: [2000,2004,2008,2012]
+*/
+/*
+function leapYear (rangeStart, rangeEnd) {
+    var arr = [];
+    for (var i = rangeStart; i <= rangeEnd; i++) {
+        if (i%4 === 0 && i%100 !== 0 || i%400 === 0) {
+            arr.push(i);
+        }
+    }
+    return arr;
+}
+
+console.log(leapYear(1590, 2012));
+*/
+/*
+--------------------------------------------------------------------------------------------------
+17. Write a JavaScript program to shuffle an array.
+Input: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Output: [5,3,0,9,8,2,1,4,7,6]
+*/
+
+function shuffle (arr) {
+    var newArr = [];
+    var temp = 0;
+    var random = Math.floor((Math.random() * arr.length) + 0);
+
+    for (var i = 0; i < arr.length; i++) {
+        temp = arr.shift();
+        newArr.push(temp)
+    }
+}
+
+console.log(shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
