@@ -871,11 +871,30 @@ Output: [5,3,0,9,8,2,1,4,7,6]
 */
 
 function shuffle (arr) {
+    //reate new array
     var newArr = [];
+    //temp is for finding next "empty"(-1) space in array
     var temp = 0;
-    for (var i = 0; i < arr.length; i++) {
-        var random = Math.floor((Math.random() * arr.length) + 0);
-        newArr[random] = arr.shift();
+    //because of shift, array length changes with iterations. Set it on global stays the same
+    var length = arr.length;
+    //fill new array (same length) with -1, so that indexOf can find
+    for (var j = 0; j < length; j++) {
+        newArr[j] = -1;
+    }
+
+    for (var i = 0; i < length; i++) {
+        //sets random number from 0 to length of array
+        var random = Math.floor((Math.random() * length) + 0);
+        //if this random index of array has -1, it is free
+        if (newArr[random] === -1) {
+            //and shift element to this new array
+            newArr[random] = arr.shift();
+        } else {
+            //if index is other than -1, it finds next first occurance of -1
+            temp = newArr.indexOf(-1);
+            //and shift element to this new array
+            newArr[temp] = arr.shift();
+        }
     }
 
     return newArr;
