@@ -869,7 +869,7 @@ console.log(leapYear(1590, 2012));
 Input: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 Output: [5,3,0,9,8,2,1,4,7,6]
 */
-
+/*
 function shuffle (arr) {
     //reate new array
     var newArr = [];
@@ -901,32 +901,86 @@ function shuffle (arr) {
 }
 
 console.log(shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]));
+*/
+/*
+--------------------------------------------------------------------------------------------------
+18. Write a JavaScript program to perform a binary search. Go to the editor
+Note : A binary search or half-interval search algorithm finds the position of a specified input value within an array sorted by key value.
+Sample array :
+var items = [1, 2, 3, 4, 5, 7, 8, 9];
+Expected Output :
+console.log(binary_Search(items, 1)); //0
+console.log(binary_Search(items, 5)); //4
+*/
+/*
+function binSearch (arr) {
+    return arr.indexOf(arguments[1]);
+}
+
+console.log(binSearch([1, 2, 3, 4, 5, 7, 8, 9], 5));
+*/
+/*
+--------------------------------------------------------------------------------------------------
+INTERCEPT: FIBONACCI
+Fibonacci numbers are the numbers in the following integer sequence, called the Fibonacci sequence, and characterized by the fact that every number after the first two is the sum of the two preceding ones:
+
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,..
+Often, especially in modern usage, the sequence is extended by one more initial term:
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,..
+*/
+/*
+function fibonacciSequence (num) {
+    var arr = [0, 1];
+    for (var i = 1; i <= num; i++) {
+        if (arr[i] >= num) {
+            return arr;
+        } else {
+            arr.push(arr[i] + arr[i-1]);
+        }
+    }
+    return arr;
+}
+
+console.log(fibonacciSequence(100));
 
 
+function fibonacciSequence (num) {
+    var arr = [0, 1];
+    var i = 1;
+    do{
+        arr.push(arr[i] + arr[i-1]);
+        i++;
+    } while (arr[i] <= num)
+}
 
+console.log(fibonacciSequence(100));
 
+function fibonacciSequence (num) {
+    var arr = [0, 1];
+    var i = 1;
+    while (arr[i] <= num) {
+        arr.push(arr[i] + arr[i-1]);
+        i++;
+    }
+}
 
+console.log(fibonacciSequence(100));
+*/
+/*
+--------------------------------------------------------------------------------------------------
+19. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays.
+Sample array :
+array1 = [1,0,2,3,4];
+array2 = [3,5,6,7,8,13];
+Expected Output :
+[4, 5, 8, 10, 12, 13]
+*/
 
+function arrSum (arr1, arr2) {
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(arrSum([1,0,2,3,4], [3,5,6,7,8,13]));
 
 
 
