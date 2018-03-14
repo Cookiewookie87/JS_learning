@@ -16,8 +16,7 @@ Global String Object
 String.prototype.split()
 Array.prototype.reverse()
 Array.prototype.join()
-*/
-/*
+
 function reverseString(str) {
     //returns array containing each character
     var res = str.split('');
@@ -48,8 +47,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 Here are some helpful links:
 Arithmetic Operators
-*/
-/*
+
 function factorialize(num) {
     //set to 1 so it is not 0*X
     var tempNum = 1;
@@ -77,8 +75,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 Here are some helpful links:
 String.prototype.replace()
 String.prototype.toLowerCase()
-*/
-/*
+
 function palindrome(str) {
     //replacing all chars in [] with no space and transform to lower case (in short, non numeric chars are also as "\W_")
     var newStr = str.replace(/[-_#,)/.(|/ /]/g, '').toLowerCase();
@@ -112,8 +109,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 Here are some helpful links:
 String.prototype.split()
 String.length
-*/
-/*
+
 function findLongestWord(str) {
     //Splitting the sentance to seperate words and save it to array
     var splitWord = str.split(' ');
@@ -141,8 +137,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 Here are some helpful links:
 String.prototype.split()
-*/
-/*
+
 function titleCase(str) {
     var res = str.split(' ');
     
@@ -165,8 +160,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 Here are some helpful links:
 Comparison Operators
-*/
-/*
+
 function largestOfFour(arr) {
     var newArray = [];
     
@@ -198,8 +192,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 Here are some helpful links:
 String.prototype.substr()
 String.prototype.substring()
-*/
-/*
+
 function confirmEnding(str, target) {
     var first = str.length;
     var second = target.length;
@@ -225,8 +218,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 Here are some helpful links:
 Global String Object
-*/
-/*
+
 function repeatStringNumTimes(str, num) {
     //if number is greater than 0 repeat string n times
     if (num > 0) {
@@ -251,8 +243,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 Here are some helpful links:
 String.prototype.slice()
-*/
-/*
+
 function truncateString(str, num) {
     //if number is less than whole length of sentance and number is greater than 3
     if (num < str.length && num > 3) {
@@ -277,8 +268,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 Here are some helpful links:
 Array.prototype.push()
 Array.prototype.slice()
-*/
-/*
+
 function chunkArrayInGroups(arr, size) {
     //temp array so we can store seperate array and than reset it
     var temp = [];
@@ -320,8 +310,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 Here are some helpful links:
 Array.prototype.slice()
 Array.prototype.splice()
-*/
-/*
+
 function slasher(arr, howMany) {
     return arr.slice(howMany);
 }
@@ -340,8 +329,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 Here are some helpful links:
 String.prototype.indexOf()
-*/
-/*
+
 function mutation(arr) {
     //put words in seperate variable in lower case and creates array of characters
     var word = arr[0].toLowerCase().split('');
@@ -368,8 +356,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 Here are some helpful links:
 Boolean Objects
 Array.prototype.filter()
-*/
-/*
+
 function bouncer(arr) {
     var resultArr = [];
     for (var i = 0; i < arr.length; i++) {
@@ -393,8 +380,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 Here are some helpful links:
 Arguments object
 Array.prototype.filter()
-*/
-/*
+
 function destroyer(arr) { 
     /loops through arguments (the first is parameter)
     for(var i = 1; i < arguments.length; i++) {  
@@ -422,8 +408,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 Here are some helpful links:
 Array.prototype.sort()
-*/
-/*
+
 function getIndexToIns(arr, num) {
     //Sorts numbers in ascending order
     arr.sort(function(a, b) {return a-b});
@@ -454,8 +439,7 @@ Remember to use Read-Search-Ask if you get stuck. Try to pair program. Write you
 Here are some helpful links:
 String.prototype.charCodeAt()
 String.fromCharCode()
-*/
-/*
+
 function rot13(str) {
     var arr = [];
     
@@ -500,8 +484,7 @@ console.log(is_array('w3resource'));
 console.log(is_array([1, 2, 4, 0]));
 false
 true
-*/
-/*
+
 function is_array (input) {
     return Array.isArray(input);
 }
@@ -509,6 +492,7 @@ function is_array (input) {
 console.log(is_array('w3resource'));
 console.log(is_array([1, 2, 4, 0]));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 2. Write a JavaScript function to clone an array.
@@ -517,8 +501,7 @@ console.log(array_Clone([1, 2, 4, 0]));
 console.log(array_Clone([1, 2, [4, 0]]));
 [1, 2, 4, 0]
 [1, 2, [4, 0]]
-*/
-/*
+
 function array_Clone (input) {
     return input.slice(0, input.length + 1);
 }
@@ -526,6 +509,7 @@ function array_Clone (input) {
 console.log(array_Clone([1, 2, 4, 0]));
 console.log(array_Clone([1, 2, [4, 0]]));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
@@ -541,8 +525,7 @@ Expected Output :
 [7, 9, 0]
 [7, 9, 0, -2]
 []
-*/
-/*
+
 function first (arr, n) {
     if (n === undefined) {
         return arr[0];
@@ -559,6 +542,7 @@ console.log(first([7, 9, 0, -2],3));
 console.log(first([7, 9, 0, -2],6));
 console.log(first([7, 9, 0, -2],-3));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
@@ -570,8 +554,7 @@ Expected Output :
 -2
 [9, 0, -2]
 [7, 9, 0, -2]
-*/
-/*
+
 function last (arr, n) {
     if (n === undefined) {
         return arr[arr.length - 1];
@@ -584,6 +567,7 @@ console.log(last([7, 9, 0, -2]));
 console.log(last([7, 9, 0, -2],3));
 console.log(last([7, 9, 0, -2],6));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 5. Write a simple JavaScript program to join all elements of the following array into a string.
@@ -592,8 +576,7 @@ Expected Output :
 "Red,Green,White,Black"
 "Red,Green,White,Black"
 "Red+Green+White+Black"
-*/
-/*
+
 function joinArr (arr) {
     return arr.toString() + "\n" + arr.join(",") + "\n" + arr.join("+");
 }
@@ -601,11 +584,11 @@ var myColor = ["Red", "Green", "White", "Black"];
 
 console.log(joinArr(myColor))
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
-*/
-/*
+
 function numSeperator (num) {
     var result = [];
     var numStr = num.toString();
@@ -625,25 +608,25 @@ function numSeperator (num) {
 
 console.log(numSeperator(prompt()));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 7. Write a JavaScript program to sort the items of an array.
 Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 Sample Output : -4,-3,1,2,3,5,6,7,8
-*/
-/*
+
 var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 arr1.sort();
 
 console.log(arr1);
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 8. Write a JavaScript program to find the most frequent item of an array.
 Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 Sample Output : a ( 5 times )
-*/
-/*
+
 function freq (arr) {
     var mostFrequent = 0, counter = 0, word, tempWord;
 
@@ -665,11 +648,11 @@ function freq (arr) {
 
 console.log(freq([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'
-*/
-/*
+
 function swap (str) {
     var result = [];
     var strArr = str.split("");
@@ -685,6 +668,7 @@ function swap (str) {
 
 console.log(swap("The Quick Brown Fox"));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 10. Write a JavaScript program which prints the elements of the following array.
@@ -699,8 +683,7 @@ Sample Output :
 "row 1"
 ------
 ------
-*/
-/*
+
 function print (arr) {
     for (var i = 0; i < arr.length; i++) {
         console.log("Row " + [i] + "\n");
@@ -712,13 +695,13 @@ function print (arr) {
 
 console.log(print([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 11. Write a JavaScript program to find the sum of squares of a numeric vector.
 Input: [0,1,2,3,4]
 Output: 30
-*/
-/*
+
 function square (arr) {
     var result = 0;
     for (var i = 0; i < arr.length; i++) {
@@ -730,13 +713,13 @@ function square (arr) {
 
 console.log(square([0,1,2,3,4]));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 12. Write a JavaScript program to compute the sum (+) and product (*) of an array of integers.
 Input: [1, 2, 3, 4, 5, 6]
 Output: Sum : 21 Product :  720
-*/
-/*
+
 function sumProd (arr) {
     var sum = 0,
         pro = 1;
@@ -749,11 +732,11 @@ function sumProd (arr) {
 
 console.log(sumProd([1, 2, 3, 4, 5, 6]));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 13. Write a JavaScript program to add items in an blank array and display the items.
-*/
-/*
+
 //gloval variable for array index and array
 var i = 0;
 var arr = [];
@@ -792,13 +775,13 @@ document.querySelector('#resetBtn').addEventListener('click', function () {
     document.getElementById('itemInput').value = '';
 });
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
 Input: [1,2,2,4,5,4,7,8,7,3,6]
 Output: ["1","2","3","4","5","6","7","8"]
-*/
-/*
+
 function duplicates (arr) {
     var newArr = [];
     var arrLength = arr.length; //if in loop, the lenght gets shorter every time because shift()
@@ -817,6 +800,7 @@ function duplicates (arr) {
 
 console.log(duplicates([1,2,2,4,5,4,7,8,7,3,6]));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 15. We have the following arrays : Go to the editor
@@ -830,8 +814,7 @@ Write a JavaScript program to display the colors in the following way :
 "5th choice is Violet."
 "6th choice is indigo."
 "7th choice is Yellow."
-*/
-/*
+
 function color (arr, suffix) {
     for (var i = 0; i < arr.length; i++) {
         if (i >= 3){
@@ -844,13 +827,13 @@ function color (arr, suffix) {
 
 console.log(color(["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"], ["th","st","nd","rd"]));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 16. Find the leap years in a given range of years.
 Input: (2000,2012)
 Output: [2000,2004,2008,2012]
-*/
-/*
+
 function leapYear (rangeStart, rangeEnd) {
     var arr = [];
     for (var i = rangeStart; i <= rangeEnd; i++) {
@@ -863,13 +846,13 @@ function leapYear (rangeStart, rangeEnd) {
 
 console.log(leapYear(1590, 2012));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 17. Write a JavaScript program to shuffle an array.
 Input: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 Output: [5,3,0,9,8,2,1,4,7,6]
-*/
-/*
+
 function shuffle (arr) {
     //reate new array
     var newArr = [];
@@ -902,6 +885,7 @@ function shuffle (arr) {
 
 console.log(shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 18. Write a JavaScript program to perform a binary search. Go to the editor
@@ -911,14 +895,14 @@ var items = [1, 2, 3, 4, 5, 7, 8, 9];
 Expected Output :
 console.log(binary_Search(items, 1)); //0
 console.log(binary_Search(items, 5)); //4
-*/
-/*
+
 function binSearch (arr) {
     return arr.indexOf(arguments[1]);
 }
 
 console.log(binSearch([1, 2, 3, 4, 5, 7, 8, 9], 5));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
 INTERCEPT: FIBONACCI
@@ -927,8 +911,7 @@ Fibonacci numbers are the numbers in the following integer sequence, called the 
 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,..
 Often, especially in modern usage, the sequence is extended by one more initial term:
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,..
-*/
-/*
+
 function fibonacciSequence (num) {
     var arr = [0, 1];
     for (var i = 1; i <= num; i++) {
@@ -966,46 +949,113 @@ function fibonacciSequence (num) {
 
 console.log(fibonacciSequence(100));
 */
+
 /*
 --------------------------------------------------------------------------------------------------
-19. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays.
-Sample array :
-array1 = [1,0,2,3,4];
-array2 = [3,5,6,7,8,13];
-Expected Output :
-[4, 5, 8, 10, 12, 13]
+
+w3resource
+OBJECT EXERCISE
+
+--------------------------------------------------------------------------------------------------
+1. Write a JavaScript program to list the properties of a JavaScript object.
+Sample object:
+var student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 };
+Sample Output: name,sclass,rollno
+
+var student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12
+};
+
+console.log(student);
 */
 
-function arrSum (arr1, arr2) {
+/*
+--------------------------------------------------------------------------------------------------
+2. Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+Sample object:
+var student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 };
 
+var student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12
+};
+
+console.log(student);
+delete student.sclass;
+console.log(student);
+*/
+
+/*
+--------------------------------------------------------------------------------------------------
+3. Write a JavaScript program to get the length of an JavaScript object.
+Sample object :
+var student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 };
+
+var student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12
+};
+
+console.log(Object.keys(student).length);
+*/
+
+/*
+--------------------------------------------------------------------------------------------------
+4. Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books. Go to the editor
+
+var library = [
+   {
+       author: 'Bill Gates',
+       title: 'The Road Ahead',
+       readingStatus: true
+   },
+   {
+       author: 'Steve Jobs',
+       title: 'Walter Isaacson',
+       readingStatus: true
+   },
+   {
+       author: 'Suzanne Collins',
+       title:  'Mockingjay: The Final Book of The Hunger Games',
+       readingStatus: false
+   }];
+
+var library = [
+{
+    author: 'Bill Gates',
+    title: 'The Road Ahead',
+    readingStatus: true
+},
+{
+    author: 'Steve Jobs',
+    title: 'Walter Isaacson',
+    readingStatus: true
+},
+{
+    author: 'Suzanne Collins',
+    title:  'Mockingjay: The Final Book of The Hunger Games',
+    readingStatus: false
+}];
+
+for (var i = 0; i < library.length; i++) {
+    if (library[i].readingStatus === true) {
+        console.log("The book " + library[i].title + " by " + library[i].author + " is in reading status.");
+    }
 }
-
-console.log(arrSum([1,0,2,3,4], [3,5,6,7,8,13]));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 
