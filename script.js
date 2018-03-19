@@ -1057,6 +1057,105 @@ for (var i = 0; i < library.length; i++) {
 }
 */
 
+/*
+--------------------------------------------------------------------------------------------------
+INTERCEPT: FILTER
+
+Returns only those numbers that are even
+input = [ 10, 15, 20, 25, 30, 35 ];
+output = [ 10, 20, 30 ]
+
+
+function onlyEven (array) {
+    var neki = array.filter(function (banana) { //banana is index of array
+        return banana % 2 === 0 || banana === 0;
+    });
+    return neki;
+};
+
+console.log(onlyEven([10, 15, 20, 25, 30, 35]));
+*/
+
+/*
+Returns only those strings with a single word (no spaces)
+input = [ 'return', 'phrases', 'with one word' ];
+output = [ 'return', 'phrases' ]
+
+
+function onlyOneWord (array) {
+    var result = array.filter(function (index){
+        return index.indexOf(" ") < 0;
+    });
+    return result;
+};
+
+
+console.log(onlyOneWord(['return', 'phrases', 'with one word']));
+*/
+
+/*
+Return only the rows in the matrix that have all positive integers
+input = [[ 1, 10, -100 ], [ 2, -20, 200 ], [ 3, 30,  300 ]];
+output = [[ 3, 30, 300 ]];
+
+function positiveRowsOnly (arr) {
+    for (var i = 0; i < arr.length; i++) {
+        var min = Math.min(...arr[i]);
+        if (min > 0) {
+            return arr[i];
+        }
+    }
+}
+
+console.log(positiveRowsOnly([[1, 10, -100 ], [ 2, -20, 200 ], [ 3, 30,  300 ]]));
+
+
+function positiveRowsOnly (array) {
+    var result = array.filter(function (index) {
+        return Math.min(...index) > 0;  //instead of arr[0], arr[1], arr[2], we can write ...arr
+    });
+    return result;
+};
+
+console.log(positiveRowsOnly([[1, 10, -100 ], [ 2, -20, 200 ], [ 3, 30,  300 ]]));
+*/
+
+/*
+--------------------------------------------------------------------------------------------------
+INTERCEPT: MAP
+
+Multiplies all elements in an array by 10.
+input = [ 45, 1, -10, 11, 250 ]
+output = [ 450, 10, -100, 110, 2500 ]
+
+function multiplyBy10 (array) {
+    var result = array.map(function(elem) {
+        return elem * 10;
+    });
+    return result;
+};
+
+console.log(multiplyBy10([ 45, 1, -10, 11, 250 ]));
+*/
+/*
+--------------------------------------------------------------------------------------------------
+INTERCEPT: REDUCE
+
+Sum all the numbers in the array.
+input = [ 10, 15, 20, 25, 30, 35 ];
+output = 135
+*/
+
+function sum (array) {
+
+};
+
+console.log(sum([ 10, 15, 20, 25, 30, 35 ]));
+
+
+
+
+
 
 
 
