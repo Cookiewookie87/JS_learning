@@ -1144,21 +1144,44 @@ INTERCEPT: REDUCE
 Sum all the numbers in the array.
 input = [ 10, 15, 20, 25, 30, 35 ];
 output = 135
-*/
 
 function sum (array) {
-
+    var result = array.reduce(function(all, item){
+        return all + item;
+    });
+    return result;
 };
 
 console.log(sum([ 10, 15, 20, 25, 30, 35 ]));
+*/
+/*
+Return the product of all items in the matrix
+input = [[ 1, 2, 3 ], [ 4, 5 ], [ 6 ]];
+output = 720
 
+function product (array) {
+    var result = array.reduce(function(all, item){
+        return all.concat(item);
+    }, []);
+    return result;
+}
 
+console.log(product([[ 1, 2, 3 ], [ 4, 5 ], [ 6 ]]));
+*/
+/*
+Turns an array of arrays into an object.
+input = [[ 'Thundercats', '80s' ], [ 'The Powerpuff Girls', '90s' ], [ 'Sealab 2021', '00s' ]];
+output = { 'Thundercats': '80s', 'The Powerpuff Girls': '90s', 'Sealab 2021': '00s' };
+*/
 
+function toObject (array) {
+    var result = array.reduce(function(all, item, index){
+        return all[index] = item;
+    }, {});
+    return result;
+}
 
-
-
-
-
+console.log(toObject([[ 'Thundercats', '80s' ], [ 'The Powerpuff Girls', '90s' ], [ 'Sealab 2021', '00s' ]]));
 
 
 
